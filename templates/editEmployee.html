@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>EDIT--EMPLOYEE</title>
+   <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+      padding: 20px;
+
+    }
+
+    form {
+      width: 800px;
+      margin: 0 auto;
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 5px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    h1 {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    label {
+      display: block;
+      font-weight: bold;
+      margin-bottom: 5px;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    select,
+    input[type="tel"] {
+      width: 100%;
+      padding: 8px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      margin-bottom: 10px;
+    }
+
+    input[type="submit"] {
+      background-color: #4CAF50;
+      color: #fff;
+      border: none;
+      padding: 10px 20px;
+      cursor: pointer;
+      border-radius: 4px;
+    }
+
+    input[type="submit"]:hover {
+      background-color: #45a049;
+    }
+  </style>
+</head>
+<body>
+<form method="post">
+    {% csrf_token %}
+    <div>
+      <h1>EDIT-EMPLOYEE-DETAIL</h1>
+      <label for="firstname"><b>Firstname:</b></label>
+      <input type="text" placeholder="Enter firstname" value="{{a.firstname}}" name="firstname" id="firstname" required>
+
+      <label for="lastname"><b>Lastname:</b></label>
+      <input type="text" placeholder="Enter lastname"  value="{{a.lastname}}" name="lastname" id="lastname" required>
+
+      <label for="email"><b>Email:</b></label>
+      <input type="email" placeholder="Enter Email" value="{{a.email}}" name="email" id="email" required>
+
+      <label for="designation"><b>Designation:</b></label>
+      <select name="designation" id="designation" value="{{a.designation}}">
+        <option value="CEO">CEO</option>
+        <option value="HR">HR</option>
+        <option value="Backend Developer">Backend Developer</option>
+        <option value="Frontend Developer">Frontend Developer</option>
+        <option value="Quality Analyst">Quality Analyst</option>
+        <option value="BD">BD</option>
+      </select>
+
+      <label for="team"><b>Team:</b></label>
+      <select name="team" id="team" value="{{a.team}}">
+        <option value="Management">Management</option>
+        <option value="Wordpress">Wordpress</option>
+        <option value="Python">Python</option>
+        <option value="UI/UX">UI/UX</option>
+        <option value="QA">QA</option>
+      </select>
+
+      <label for="phone"><b>Phone number:</b></label>
+      <input type="text" id="phone" name="phone"  required value="{{a.phonenumber}}">
+
+      <label for="salary"><b>Salary:</b></label>
+      <input type="text" placeholder="Enter salary" name="salary" id="salary" required value="{{a.salary}}">
+      <div style="text-align:center;">
+
+        <button type="submit" id="subBtn1" >Register</button>
+
+      </div>
+
+      </div>
+    </form>
+
+</body>
+</html>

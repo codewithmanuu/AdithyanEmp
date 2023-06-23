@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Employee Leave List</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+
+        h1 {
+            color: #333;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        th, td {
+            padding: 8px;
+            border-bottom: 1px solid #ddd;
+            text-align: left;
+        }
+
+        th {
+            background-color: #f2f2f2;
+        }
+
+        .empty-message {
+            margin-top: 20px;
+            color: #888;
+        }
+        .back-button {
+            display: inline-block;
+            margin-top: 20px;
+            text-decoration: none;
+            background-color: #4CAF50;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            border-radius: 4px;
+            transform:translate(600px,0px)
+        }
+
+        .back-button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <h1>Employee Leave List</h1>
+    {% if employee_leaves %}
+        <table>
+            <tr>
+                <th>Employee</th>
+                <th>From Date</th>
+                <th>To Date</th>
+                <th>Leave Type</th>
+                <th>Purpose</th>
+            </tr>
+            {% for leave in employee_leaves %}
+                <tr>
+                    <td>{{ leave.employee.firstname }}</td>
+                    <td>{{ leave.from_date }}</td>
+                    <td>{{ leave.to_date }}</td>
+                    <td>{{ leave.leave_type }}</td>
+                    <td>{{ leave.purpose }}</td>
+                </tr>
+            {% endfor %}
+        </table>
+    {% else %}
+        <p class="empty-message">No employee leaves found.</p>
+    {% endif %}
+<div class="center">
+    <a href="javascript:history.back()" class="back-button">Back</a>
+</div>
+</body>
+</html>

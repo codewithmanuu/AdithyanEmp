@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Employee Leaves</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+
+        h1 {
+            color: #333;
+        }
+
+        form {
+            width: 400px;
+            margin-top: 20px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 10px;
+            color: #555;
+        }
+
+        select, input[type="date"], textarea {
+            width: 100%;
+            padding: 8px;
+            border-radius: 4px;
+            border: 1px solid #ccc;
+            margin-bottom: 15px;
+        }
+
+        textarea {
+            resize: vertical;
+            height: 100px;
+        }
+
+        input[type="submit"] {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+<center>
+    <h1>Employee Leaves</h1>
+    <form method="POST">
+        {% csrf_token %}
+
+        <label for="from_date">From Date:</label>
+        <input type="date" name="from_date" id="from_date" required>
+        <br>
+        <label for="to_date">To Date:</label>
+        <input type="date" name="to_date" id="to_date" required>
+        <br>
+        <label for="leave_type">Leave Type:</label>
+        <select name="leave_type" id="leave_type">
+            <option value="hall_day">HALF DAY</option>
+            <option value="full_day">FULL DAY</option>
+        </select>
+        <br>
+        <label for="purpose">Purpose:</label>
+        <textarea name="purpose" id="purpose" rows="4" cols="50"></textarea>
+        <br>
+        <input type="submit" value="Submit">
+    </form>
+</center>
+</body>
+</html>

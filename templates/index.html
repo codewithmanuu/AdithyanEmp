@@ -1,0 +1,180 @@
+<html lang="en">
+{% load static %}
+<head>
+  <title>INDEX</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <style>
+
+
+    .navbar {
+      margin-bottom: 0;
+      border-radius: 0;
+    }
+
+
+footer {
+  text-align: center;
+  padding: 3px;
+  background-color: DarkSalmon;
+  color: white;
+
+  width: 100%;
+  transform: translate(0px, 700px);
+}
+.fa {
+  padding: 20px;
+  font-size: 30px;
+  width: 30px;
+  text-align: center;
+  text-decoration: none;
+  margin: 5px 2px;
+  border-radius: 50%;
+}
+
+.fa:hover {
+    opacity: 0.7;
+}
+
+.fa-facebook {
+  background: #3B5998;
+  color: white;
+}
+
+.fa-twitter {
+  background: #55ACEE;
+  color: white;
+}
+
+.fa-google {
+  background: #dd4b39;
+  color: white;
+}
+
+.fa-linkedin {
+  background: #007bb5;
+  color: white;
+}
+
+
+.fa-instagram {
+  background: #125688;
+  color: white;
+}
+
+
+
+
+  </style>
+</head>
+<body>
+
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#">Employee Management</a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="#">Home</a></li>
+        <li><a href="{% url 'create_employee' %}">Create employee</a></li>
+        <li><a href="{% url 'manage_employee' %}">Manage employee</a></li>
+        <li><a href="{% url 'employee_leaves' %}">Manage Leaves</a></li>
+        <li><a href="{% url 'salary_graph' %}">Expense Management</a></li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="{% url 'login' %}"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div class="container" style="transform:translate(50px,100px)">
+  <div class="row">
+    <div class="col-md-6" style="transform:translate(30px,100px)">
+      <center>
+        The Home For All Employee<br>
+        <span>This employee manangement which helps to cooperate with society for Good Management</span>
+      </center>
+    </div>
+    <div class="col-md-6" style="transform:translate(100px,-20px)">
+       <img src="{% static 'pic1.jpg' %}" height="250px" width="400px" alt="Image">
+    </div>
+  </div>
+</div>
+
+<div class="container">
+  <div class="row"  >
+    <div class="col-md-6" style="transform:translate(60px,250px)" >
+     <img src="{% static 'pic3.jpg' %}" height="200px" width="450px" alt="Image">
+    </div>
+    <div class="col-md-6" style="transform:translate(0px,250px)" >
+      <b>
+      Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+      Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
+      when an unknown printer took a galley of type and scrambled it to make a type
+      specimen book. It has survived not only five centuries, but also the leap into
+      ele<footer>
+  <p>Author: Hege Refsnes<br>
+  <a href="mailto:hege@example.com">hege@example.com</a></p>
+</footer>ctronic typesetting, remaining essentially unchanged. It was popularised in
+      the 1960s with the release of Letraset sheets containing Lorem Ipsum passages,
+      and more recently with desktop publishing software like Aldus PageMaker including
+      versions of Lorem Ipsum.
+      </b>
+    </div>
+  </div>
+</div>
+
+<div class="container" style=" background-color: DarkSalmon;">
+  <div class="row">
+    <div class="col-md-6" style="transform:translate(30px,400px)" >
+      <b>
+      Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+      Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
+      when an unknown printer took a galley of type and scrambled it to make a type
+      specimen book. It has survived not only five centuries, but also the leap into
+      electronic typesetting, remaining essentially unchanged. It was popularised in
+      the 1960s with the release of Letraset sheets containing Lorem Ipsum passages,
+      and more recently with desktop publishing software like Aldus PageMaker including
+      versions of Lorem Ipsum.
+      </b>
+    </div>
+    <div class="col-md-6" style="transform:translate(150px,380px)" >
+      <img src="{% static 'pic3.jpg' %}" height="200px" width="450px" alt="Image">
+    </div>
+
+
+<footer>
+  <a href="https://codesvera.com/">https://codesvera.com/</a>
+  <p>CODESVERA INFOTECH<br>
+    <a href="https://www.facebook.com/" class="fa fa-facebook"></a>&nbsp;&nbsp;&nbsp;&nbsp;
+    <a href="https://twitter.com/i/flow/login" class="fa fa-twitter"></a>&nbsp;&nbsp;&nbsp;&nbsp;
+    <a href="https://www.google.com/" class="fa fa-google"></a>&nbsp;&nbsp;&nbsp;&nbsp;
+    <a href="https://in.linkedin.com/" class="fa fa-linkedin"></a>&nbsp;&nbsp;&nbsp;&nbsp;
+    <a href="https://www.instagram.com/" class="fa fa-instagram"></a>&nbsp;&nbsp;&nbsp;&nbsp;
+
+</footer>
+
+
+
+
+
+
+
+
+    <!---->
+
+
+    <!---->
+</body>
+</html>

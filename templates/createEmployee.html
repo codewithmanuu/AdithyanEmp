@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>CREATE EMPLOYEE</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+      padding: 20px;
+    }
+
+    form {
+      width: 800px;
+      margin: 0 auto;
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 5px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    h1 {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    label {
+      display: block;
+      font-weight: bold;
+      margin-bottom: 5px;
+    }
+
+    .form-group {
+      display: flex;
+      margin-bottom: 10px;
+    }
+
+    .form-group label {
+      flex: 1;
+    }
+
+    .form-group input,
+    .form-group select {
+      flex: 2;
+      padding: 8px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+
+    .form-group button {
+      margin-top: 10px;
+      text-align: center;
+    }
+
+  .form-group button {
+    margin-top: 10px;
+    text-align: center;
+    background-color: #4CAF50;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 4px;
+    transform:translate(400px,0px)
+  }
+
+  .form-group button:hover {
+    background-color: #45a049;
+  }
+
+  </style>
+</head>
+<body>
+  <form method="post">
+    {% csrf_token %}
+    <h1>Register</h1>
+
+<!--    <div class="form-group">-->
+<!--      <label for="employee_id">Employee ID:</label>-->
+<!--      <input type="text" placeholder="Enter ID" name="employee_id" id="employee_id" required>-->
+<!--    </div>-->
+
+    <div class="form-group">
+      <label for="firstname">First Name:</label>
+      <input type="text" placeholder="Enter First Name" name="firstname" id="firstname" required>
+    </div>
+
+    <div class="form-group">
+      <label for="lastname">Last Name:</label>
+      <input type="text" placeholder="Enter Last Name" name="lastname" id="lastname" required>
+    </div>
+
+    <div class="form-group">
+      <label for="email">Email:</label>
+      <input type="email" placeholder="Enter Email" name="email" id="email" required>
+    </div>
+
+    <div class="form-group">
+      <label for="designation">Designation:</label>
+      <select name="designation" id="designation">
+        <option value="CEO">CEO</option>
+        <option value="HR">HR</option>
+        <option value="Backend Developer">Backend Developer</option>
+        <option value="Frontend Developer">Frontend Developer</option>
+        <option value="Quality Analyst">Quality Analyst</option>
+        <option value="BD">BD</option>
+      </select>
+    </div>
+
+    <div class="form-group">
+      <label for="team">Team:</label>
+      <select name="team" id="team">
+        <option value="Management">Management</option>
+        <option value="Wordpress">Wordpress</option>
+        <option value="Python">Python</option>
+        <option value="UI/UX">UI/UX</option>
+        <option value="QA">QA</option>
+      </select>
+    </div>
+
+    <div class="form-group">
+      <label for="phone">Phone Number:</label>
+      <input type="text" id="phone" name="phone" required>
+    </div>
+
+    <div class="form-group">
+      <label for="salary">Salary:</label>
+      <input type="text" placeholder="Enter Salary" name="salary" id="salary" required>
+    </div>
+
+    <div class="form-group">
+      <button type="submit" id="subBtn1">Register</button>
+    </div>
+    <div class="center" style="transform:translate(420px,0px)">
+    <a href="javascript:history.back()" class="back-button">Back</a>
+    </div>
+  </form>
+
+</body>
+</html>

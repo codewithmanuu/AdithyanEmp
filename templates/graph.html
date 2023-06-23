@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Employee Salary Graph</title>
+    <script src="https://code.highcharts.com/highcharts.js"></script>
+    <style>
+        #container {
+            margin: 20px auto;
+            width: 700px;
+            height: 500px;
+        }
+    </style>
+</head>
+<body>
+    <div id="container"></div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            var chart = Highcharts.chart('container', {
+                title: {
+                    text: 'Employee Salaries'
+                },
+                xAxis: {
+                    categories: [
+                        {% for employee in employees %}
+                            '{{ employee.firstname }}',
+                        {% endfor %}
+                    ]
+                },
+                yAxis: {
+                    title: {
+                        text: 'Salary'
+                    }
+                },
+                series: [{
+                    name: 'Salary',
+                    data: [
+                        {% for employee in employees %}
+                            {{ employee.salary }},
+                        {% endfor %}
+                    ]
+                }]
+            });
+        });
+    </script>
+</body>
+</html>
